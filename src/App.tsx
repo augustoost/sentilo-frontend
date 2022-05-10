@@ -1,11 +1,7 @@
-import { useState } from 'react'
+import LeafletMap from './components/leafletMap'
 
 function App() {
-  return (
-    <div className="flex justify-center items-center bg-blue-400 rounded-md w-32 h-16">
-      <h1>Hello World</h1>
-    </div>
-  )
+  return <LeafletMap />
 }
 
 export default App
