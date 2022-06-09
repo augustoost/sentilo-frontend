@@ -3,24 +3,20 @@ import L, { Routing } from 'leaflet'
 import 'leaflet-routing-machine/dist/leaflet-routing-machine.css'
 import 'leaflet-routing-machine'
 import { useMap } from 'react-leaflet'
+import { getWaypoints } from '../../utils/getWaypoints'
 
 L.Marker.prototype.options.icon = L.icon({
   iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png'
 })
 
-const MyRouting = () => {
+interface IMyRoutingProps {
+  observations: Sentilo.IObservations[]
+}
+
+const MyRouting = ({ observations }: IMyRoutingProps) => {
   const map = useMap()
 
-  // Waypoints used to calculate the route.
-  const myWaypoints = [
-    L.latLng(parseFloat('-24.732398'), parseFloat('-53.7634314')),
-    L.latLng(parseFloat('-24.7298195'), parseFloat('-53.7633335')),
-    L.latLng(parseFloat('-24.7295053'), parseFloat('-53.759723')),
-    L.latLng(parseFloat('-24.7198386'), parseFloat('-53.7611316')),
-    L.latLng(parseFloat('-24.7201591'), parseFloat('-53.7431879')),
-    L.latLng(parseFloat('-24.7210014'), parseFloat('-53.7437236'))
-  ]
-
+  const myWaypoints = getWaypoints(observations)
   // Create a new Plan to set the right markers.
   // index: index of the waypoint.
   // waypoint: the waypoint.
