@@ -1,21 +1,7 @@
-import * as React from 'react'
+import React from 'react'
 
-import {
-  AppBar,
-  Box,
-  Toolbar,
-  IconButton,
-  Typography,
-  Menu,
-  Container,
-  Avatar,
-  Button,
-  Tooltip,
-  MenuItem
-} from '@mui/material'
+import { AppBar, Box, Toolbar, Typography, Container } from '@mui/material'
 import { Link } from 'react-router-dom'
-
-const pages = ['Products', 'Pricing', 'Blog']
 
 export const AppNavbar = () => {
   const linkStyle = {

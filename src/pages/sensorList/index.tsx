@@ -11,9 +11,7 @@ export const SensorList = () => {
   }, [])
 
   const getAllSensors = async () => {
-    const { data } = await sentiloApi.get<Sentilo.ISensors[]>(
-      `/data/${import.meta.env.VITE_APP_SENTILO_UTFPR_PROVIDERID}?limit=1000`
-    )
+    const { data } = await sentiloApi.get(`/data/${import.meta.env.VITE_APP_SENTILO_UTFPR_PROVIDERID}?limit=1000`)
 
     setSensors(data.sensors)
   }

@@ -27,7 +27,7 @@
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [".tsx"]
+        "extensions": [".tsx", ".jsx"]
       }
     ],
     "no-use-before-define": "off",
@@ -44,7 +44,7 @@
   },
   "settings": {
     "import/resolver": {
-      "typescript": {}
+      "extensions": [".js", ".ts"]
     }
   }
 }

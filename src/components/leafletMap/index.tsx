@@ -1,7 +1,7 @@
 import { MapContainer, TileLayer } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 
-import LeafletRoutingMachine from '../leafletRoutingMachine'
+import { LeafletRoutingMachine } from '../leafletRoutingMachine'
 
 interface ILeafletMapProps {
   observations: Sentilo.IObservations[]
