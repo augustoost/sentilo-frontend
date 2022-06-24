@@ -1,9 +1,13 @@
-import React from 'react'
 import LeafletMap from '../../components/leafletMap'
 import { useLocation } from 'react-router-dom'
 
-export const Map = () => {
-  const { state } = useLocation()
+interface IStateProps {
+  observations: Sentilo.IObservations[]
+}
 
-  return <LeafletMap observations={state.observations} />
+export const Map = () => {
+  const location = useLocation()
+  const { observations } = location.state as IStateProps
+
+  return <LeafletMap observations={observations} />
 }
