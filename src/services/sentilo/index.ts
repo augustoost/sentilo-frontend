@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-
-
 const sentiloApi = axios.create({
   baseURL: import.meta.env.VITE_APP_SENTILO_BASE_URL,
   headers: {
