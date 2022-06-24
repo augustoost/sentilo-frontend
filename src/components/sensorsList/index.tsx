@@ -13,10 +13,12 @@ export const SensorsList = ({ sensors }: ISensorsList) => {
     <TableContainer sx={{ marginTop: 5, display: 'flex', justifyContent: 'center' }}>
       <Table sx={{ width: 1 / 2, minWidth: 650 }} size="medium">
         <TableHead>
-          <TableCell>Sensor</TableCell>
-          <TableCell align="center" width={200}>
-            Mapa
-          </TableCell>
+          <TableRow>
+            <TableCell>Sensor</TableCell>
+            <TableCell align="center" width={200}>
+              Mapa
+            </TableCell>
+          </TableRow>
         </TableHead>
 
         <TableBody>
